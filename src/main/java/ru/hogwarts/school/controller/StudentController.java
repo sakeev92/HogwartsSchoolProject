@@ -80,4 +80,13 @@ public class StudentController {
     public ResponseEntity<Double> getAverageAgeStudents2 (){
         return ResponseEntity.ok(studentService.getAverageAgeStudents2());
     }
+    @GetMapping("/threads-print-console")
+    public void treadsPrintToConsole(){
+        studentService.treadsPrintToConsole();
+    }
+    @GetMapping("/synchronized-treads-print-console")
+    public void synchronizedTreadsPrintToConsole(){
+        studentService.synchronizedTreadsPrintToConsole();
+    }
 }
+
